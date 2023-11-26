@@ -5,6 +5,9 @@ import random
 import uuid
 import os
 
+unique_id = str(uuid.uuid4())[:8]
+print(f'The figure is data_combined_plots/{unique_id}.png')
+
 
 dataset = Traces_Dataset('dataset.csv')
 import torch
@@ -55,5 +58,4 @@ plt.tight_layout()
 
 # Save the figure
 os.makedirs('data_combined_plots', exist_ok=True)
-unique_id = str(uuid.uuid4())[:8]
 plt.savefig(f'data_combined_plots/{unique_id}.png')
