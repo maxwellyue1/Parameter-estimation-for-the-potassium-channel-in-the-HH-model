@@ -5,10 +5,6 @@ import random
 import uuid
 import os
 
-unique_id = str(uuid.uuid4())[:8]
-print(f'The figure is data_combined_plots/{unique_id}.png')
-
-
 dataset = Traces_Dataset('dataset.csv')
 import torch
 my_tensor = dataset.inputs
@@ -58,4 +54,4 @@ plt.tight_layout()
 
 # Save the figure
 os.makedirs('data_combined_plots', exist_ok=True)
-plt.savefig(f'data_combined_plots/{unique_id}.png')
+plt.savefig(f'data_combined_plots/{n_samples}_dataset.png')
