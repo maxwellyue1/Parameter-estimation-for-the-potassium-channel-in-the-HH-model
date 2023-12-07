@@ -250,14 +250,14 @@ def main():
         return x
 
     def objective_fxn(individual):
-    # decoding chromosome to get decoded x in a list
-    X = decode_all_x(individual, no_of_variables, param_bounds_wo_h)
+        # decoding chromosome to get decoded x in a list
+        X = decode_all_x(individual, no_of_variables, param_bounds_wo_h)
 
-    Ik_stim = get_current_trace(target_t_traces, X)
+        Ik_stim = get_current_trace(target_t_traces, X)
 
-    obj_function_value = 0
-    obj_function_value = np.sum(np.square(Ik_stim - target_current_traces))  # fitness of ith voltage trace. i.e. sum_t[(Ik_stim-Ik)^2]
-    return [obj_function_value]
+        obj_function_value = 0
+        obj_function_value = np.sum(np.square(Ik_stim - target_current_traces))  # fitness of ith voltage trace. i.e. sum_t[(Ik_stim-Ik)^2]
+        return [obj_function_value]
 
     # registering objetive function with constraint
     toolbox.register("evaluate", objective_fxn) # privide the objective function here
@@ -305,107 +305,107 @@ def main():
 
     # Begin the evolution
     while g < no_of_generations:
-    # A new generation
-    g = g + 1
+        # A new generation
+        g = g + 1
 
-    #The evolution itself will be performed by selecting, mating, and mutating the individuals in our population.
+        #The evolution itself will be performed by selecting, mating, and mutating the individuals in our population.
 
-    # the first step is to select the next generation.
-    # Select the next generation individuals using select defined in toolbox here tournament selection
-    # the fitness of populations is decided from the individual.fitness.values[0] attribute
-    #      which we assigned earlier to each individual
-    # these are best individuals selected from population after selection strategy
-    offspring = toolbox.select(pop, len(pop))
-    # Clone the selected individuals, this needs to be done to create copy and avoid problem of inplace operations
-    # This is of utter importance since the genetic operators in toolbox will modify the provided objects in-place.
-    offspring = list(map(toolbox.clone, offspring))
+        # the first step is to select the next generation.
+        # Select the next generation individuals using select defined in toolbox here tournament selection
+        # the fitness of populations is decided from the individual.fitness.values[0] attribute
+        #      which we assigned earlier to each individual
+        # these are best individuals selected from population after selection strategy
+        offspring = toolbox.select(pop, len(pop))
+        # Clone the selected individuals, this needs to be done to create copy and avoid problem of inplace operations
+        # This is of utter importance since the genetic operators in toolbox will modify the provided objects in-place.
+        offspring = list(map(toolbox.clone, offspring))
 
-    # Next, we will perform both the crossover (mating) and the mutation of the produced children with
-    #        a certain probability of CXPB and MUTPB.
-    # The del statement will invalidate the fitness of the modified offspring as they are no more valid
-    #       as after crossover and mutation, the individual changes
+        # Next, we will perform both the crossover (mating) and the mutation of the produced children with
+        #        a certain probability of CXPB and MUTPB.
+        # The del statement will invalidate the fitness of the modified offspring as they are no more valid
+        #       as after crossover and mutation, the individual changes
 
-    # Apply crossover and mutation on the offspring
-    # note, that since we are not cloning, the changes in child1, child2 and mutant are happening inplace in offspring
-    for child1, child2 in zip(offspring[::2], offspring[1::2]):
-        #random.seed(42)
-        if random.random() < CXPB:
-        toolbox.mate(child1, child2)
-        del child1.fitness.values
-        del child2.fitness.values
+        # Apply crossover and mutation on the offspring
+        # note, that since we are not cloning, the changes in child1, child2 and mutant are happening inplace in offspring
+        for child1, child2 in zip(offspring[::2], offspring[1::2]):
+            #random.seed(42)
+            if random.random() < CXPB:
+                toolbox.mate(child1, child2)
+                del child1.fitness.values
+                del child2.fitness.values
 
-    for mutant in offspring:
-        #random.seed(42)
-        if random.random() < MUTPB:
-        toolbox.mutate(mutant)
-        del mutant.fitness.values
-
-
-    # Evaluate the individuals with an invalid fitness (after we use del to make them invalid)
-    # again note, that since we did not use clone, each change happening is happening inplace in offspring
-    invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-    fitnesses = map(toolbox.evaluate, invalid_ind)
-    for ind, fit in zip(invalid_ind, fitnesses):
-        ind.fitness.values = fit
+        for mutant in offspring:
+            #random.seed(42)
+            if random.random() < MUTPB:
+                toolbox.mutate(mutant)
+                del mutant.fitness.values
 
 
-    # To check the performance of the evolution, we will calculate and print the
-    # minimal, maximal, and mean values of the fitnesses of all individuals in our population
-    # as well as their standard deviations.
-    # Gather all the fitnesses in one list and print the stats
-    #this_gen_fitness = [ind.fitness.values[0] for ind in offspring]
-    this_gen_fitness = [] # this list will have fitness value of all the offspring
-    for ind in offspring:
-        this_gen_fitness.append(ind.fitness.values[0])
+        # Evaluate the individuals with an invalid fitness (after we use del to make them invalid)
+        # again note, that since we did not use clone, each change happening is happening inplace in offspring
+        invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+        fitnesses = map(toolbox.evaluate, invalid_ind)
+        for ind, fit in zip(invalid_ind, fitnesses):
+            ind.fitness.values = fit
 
 
-    #### SHORT METHOD
-
-    # will update the HallOfFame object with the best individual according to fitness value and weight (while creating base.Fitness class)
-    hall_of_fame.update(offspring)
-
-
-    ####################################### collect parameters for each selected gen
-    if g in gens_collect:
-        for g_best_indi in hall_of_fame:
-        # using values to return the value and
-        # not a deap.creator.FitnessMin object
-
-        #g_best_obj_val_overall = g_best_indi.fitness.values[0]
-        #print('Minimum value for function: ',g_best_obj_val_overall)
-
-        print(f'{g}th Optimum Solution: ',decode_all_x(g_best_indi, no_of_variables, param_bounds_wo_h))
-        gens_best_sol.append(decode_all_x(g_best_indi, no_of_variables, param_bounds_wo_h))
-    ########################################
-
-    # pass a list of fitnesses
-    # (basically an object on which we want to perform registered functions)
-    # will return a dictionary with key = name of registered function and value is return of the registered function
-    stats_of_this_gen = stats.compile(this_gen_fitness)
-
-    # creating a key with generation number
-    stats_of_this_gen['Generation'] = g
-
-    # printing for each generation
-    print(stats_of_this_gen)
-
-    # recording everything in a logbook object
-    # logbook is essentially a list of dictionaries
-    logbook.append(stats_of_this_gen)
+        # To check the performance of the evolution, we will calculate and print the
+        # minimal, maximal, and mean values of the fitnesses of all individuals in our population
+        # as well as their standard deviations.
+        # Gather all the fitnesses in one list and print the stats
+        #this_gen_fitness = [ind.fitness.values[0] for ind in offspring]
+        this_gen_fitness = [] # this list will have fitness value of all the offspring
+        for ind in offspring:
+            this_gen_fitness.append(ind.fitness.values[0])
 
 
-    # now one generation is over and we have offspring from that generation
-    # these offspring wills serve as population for the next generation
-    # this is not happening inplace because this is simple python list and not a deap framework syntax
-    pop[:] = offspring
+        #### SHORT METHOD
+
+        # will update the HallOfFame object with the best individual according to fitness value and weight (while creating base.Fitness class)
+        hall_of_fame.update(offspring)
+
+
+        ####################################### collect parameters for each selected gen
+        if g in gens_collect:
+            for g_best_indi in hall_of_fame:
+                # using values to return the value and
+                # not a deap.creator.FitnessMin object
+
+                #g_best_obj_val_overall = g_best_indi.fitness.values[0]
+                #print('Minimum value for function: ',g_best_obj_val_overall)
+
+                print(f'{g}th Optimum Solution: ',decode_all_x(g_best_indi, no_of_variables, param_bounds_wo_h))
+                gens_best_sol.append(decode_all_x(g_best_indi, no_of_variables, param_bounds_wo_h))
+        ########################################
+
+        # pass a list of fitnesses
+        # (basically an object on which we want to perform registered functions)
+        # will return a dictionary with key = name of registered function and value is return of the registered function
+        stats_of_this_gen = stats.compile(this_gen_fitness)
+
+        # creating a key with generation number
+        stats_of_this_gen['Generation'] = g
+
+        # printing for each generation
+        print(stats_of_this_gen)
+
+        # recording everything in a logbook object
+        # logbook is essentially a list of dictionaries
+        logbook.append(stats_of_this_gen)
+
+
+        # now one generation is over and we have offspring from that generation
+        # these offspring wills serve as population for the next generation
+        # this is not happening inplace because this is simple python list and not a deap framework syntax
+        pop[:] = offspring
 
     # print the best solution using HallOfFame object
     for best_indi in hall_of_fame:
-    # using values to return the value and
-    # not a deap.creator.FitnessMin object
-    best_obj_val_overall = best_indi.fitness.values[0]
-    print('Minimum value for function: ',best_obj_val_overall)
-    print('Optimum Solution: ',decode_all_x(best_indi,no_of_variables,param_bounds_wo_h))
+        # using values to return the value and
+        # not a deap.creator.FitnessMin object
+        best_obj_val_overall = best_indi.fitness.values[0]
+        print('Minimum value for function: ',best_obj_val_overall)
+        print('Optimum Solution: ',decode_all_x(best_indi,no_of_variables,param_bounds_wo_h))
 
 
     # finding the fitness value of the fittest individual of the last generation or
@@ -470,7 +470,7 @@ def main():
     plt.savefig(f'GA_plots/fig {unique_id}')
 
     for i in range(target_params.shape[0]):
-    history_dict[list(param_bounds_wo_h_dict.keys())[i]+'_mse'] = np.mean(np.square(gens_best_sol[-1][i] - target_params[i]))
+        history_dict[list(param_bounds_wo_h_dict.keys())[i]+'_mse'] = np.mean(np.square(gens_best_sol[-1][i] - target_params[i]))
 
     history_dict['overall_mse'] = np.mean(np.square(target_params - gens_best_sol[-1]))
 
