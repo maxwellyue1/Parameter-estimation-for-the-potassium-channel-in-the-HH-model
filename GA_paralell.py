@@ -10,7 +10,7 @@ if __name__ == "__main__":
     num_processes = 4
 
     # Create a list of script names (adjust as needed)
-    script_names = ["your_script.py"] * num_processes
+    script_names = ["GA.py"] * num_processes
 
     # Run scripts in parallel
     with concurrent.futures.ProcessPoolExecutor() as executor:
