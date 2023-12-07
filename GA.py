@@ -71,14 +71,17 @@ def main():
     target_params = params_set[-1]
 
 
-    gens_collect = [1, 10, 50, 100, 150, 200, 250, 300] # the generations to collect parameters
+    # gens_collect = [1, 10, 50, 100, 150, 200, 250, 300] # the generations to collect parameters
+    gens_collect = [1, 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000] # the generations to collect parameters
 
     gens_best_sol = [] # the best idividuals at each generation in gens_collect
 
-    no_of_generations = 300 # decide iterations
+    no_of_generations = 1000 # decide iterations
 
     # decide, population size or no of individuals or solutions being considered in each generation
-    population_size = 1000#300
+    # population_size = 1000#300
+    population_size = 3000#300
+
 
     # chromosome (also called individual) in DEAP
     # length of the individual or chrosome should be divisible by no. of variables
@@ -435,6 +438,7 @@ def main():
 
     # the red line at lowest value of f(x,y)
     plt.axhline(y=best_obj_val_overall,color='r',linestyle='--')
+    history_dict['best_fitness'] = best_obj_val_overall
 
 
     #
@@ -467,14 +471,33 @@ def main():
     #             arrowprops=dict(facecolor='black',shrink=1,width=1,headwidth=5),
     #             fontsize=18,fontweight='bold')
 
-    plt.savefig(f'GA_plots/fig {unique_id}')
+    plt.savefig(f'GA_plots/search {unique_id}')
+
+    simulated_current_traces = get_current_trace(target_t_traces, gens_best_sol[-1])
+    plt.figure()
+    for i in range(0,len(input['step_Vs'])+len(input['prestep_Vs'])):
+        labeli = "target :{:.2f}".format(i)
+        labeli_esti = "estimated :{:.2f}".format(i)
+        plt.plot(target_t_traces[i], target_current_traces[i], label=labeli, linewidth=0.5, linestyle='dotted', color = 'black')
+        plt.plot(target_t_traces[i], simulated_current_traces[i], label=labeli_esti, linewidth=0.5, color='red')
+    plt.title('Simulated trace of the best estimated parameters')
+    plt.xlabel('t (ms)')
+    plt.ylabel('I (mA)')
+    plt.savefig(f'GA_plots/plots {unique_id}')
+
+    def relative_error(prediction, true_value):
+        n = true_value.shape[0]
+        re = 1/n * np.sum(np.square((prediction-true_value)/true_value))
+        return re
 
     for i in range(target_params.shape[0]):
         history_dict[list(param_bounds_wo_h_dict.keys())[i]+'_mse'] = np.mean(np.square(gens_best_sol[-1][i] - target_params[i]))
+        history_dict[list(param_bounds_wo_h_dict.keys())[i]+'_re'] = np.square((gens_best_sol[-1][i]-target_params[i])/target_params[i])
 
     history_dict['overall_mse'] = np.mean(np.square(target_params - gens_best_sol[-1]))
+    history_dict['overall_re'] = relative_error(gens_best_sol[-1], target_params)
 
-    history_dict['target'] = target_params
+    history_dict['target'] = target_params.tolist()
     history_dict['estimated'] = gens_best_sol[-1]
 
     def experiment_records(row_data, file_path = 'GA records.csv'): 

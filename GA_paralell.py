@@ -7,7 +7,7 @@ def run_script(script_name):
 
 if __name__ == "__main__":
     # Specify the number of processes/cores to use
-    num_processes = 4
+    num_processes = 10
 
     # Create a list of script names (adjust as needed)
     script_names = ["GA.py"] * num_processes
