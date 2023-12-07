@@ -9,7 +9,11 @@ class Net(nn.Module):
         self.layers = nn.Sequential(
                 nn.Linear(n_features, 256),
                 nn.SiLU(),
+                nn.Linear(256, 256),
+                nn.SiLU(),
                 nn.Linear(256, 128),
+                nn.SiLU(),
+                nn.Linear(128, 128),
                 nn.SiLU(),
                 nn.Linear(128, 64),
                 nn.SiLU(),

@@ -39,6 +39,8 @@ dataset.clean_features()
 dataset.find_mean_std()
 dataset.normalize()
 print(dataset.inputs.shape)
+history_dict['normalize_mean'] = dataset.train_mean
+history_dict['normalize_std'] = dataset.train_std
 history_dict['dataset'] = dataset.inputs.shape
 
 # initialize train, val, test set
