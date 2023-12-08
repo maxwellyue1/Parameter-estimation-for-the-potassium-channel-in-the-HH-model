@@ -5,7 +5,7 @@ import random, numpy as np
 import matplotlib.pyplot as plt
 import uuid
 import csv
-import os
+import os 
 from deap import base
 from deap import creator
 from deap import tools
