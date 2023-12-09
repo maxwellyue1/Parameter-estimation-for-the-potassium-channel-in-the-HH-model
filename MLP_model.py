@@ -7,17 +7,19 @@ class Net(nn.Module):
     def __init__(self, n_features):
         super().__init__()
         self.layers = nn.Sequential(
-                nn.Linear(n_features, 256),
+                nn.Linear(n_features, 1024),
                 nn.SiLU(),
-                nn.Linear(256, 256),
+                nn.Linear(1024, 1024),
                 nn.SiLU(),
-                nn.Linear(256, 128),
+                nn.Linear(1024, 1024),
                 nn.SiLU(),
-                nn.Linear(128, 128),
+                nn.Linear(512, 512),
                 nn.SiLU(),
-                nn.Linear(128, 64),
+                nn.Linear(512, 512),
                 nn.SiLU(),
-                nn.Linear(64, 8)
+                nn.Linear(512, 512),
+                nn.SiLU(),
+                nn.Linear(512, 8)
             )
         
     def forward(self, x):

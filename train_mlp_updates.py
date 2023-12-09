@@ -39,8 +39,8 @@ dataset.clean_features()
 dataset.find_mean_std()
 dataset.normalize()
 print(dataset.inputs.shape)
-history_dict['normalize_mean'] = dataset.train_mean
-history_dict['normalize_std'] = dataset.train_std
+history_dict['normalize_mean'] = dataset.train_mean.tolist()
+history_dict['normalize_std'] = dataset.train_std.tolist()
 history_dict['dataset'] = dataset.inputs.shape
 
 # initialize train, val, test set
@@ -104,6 +104,8 @@ val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
 # initialization train, val losses
 train_losses = []
 val_losses = []
+
+best_validation_loss = float('inf')
 
 # record loss of the nn model without any training, dont need when on GPU
 # model.eval()
@@ -176,13 +178,21 @@ for epoch in range(1, n_epochs + 1):
     print(f'{epoch}: train-{avg_train_loss}, val-{avg_val_loss}')
 
     # saving the model with best training mse
-    if len(train_losses) != 1:
-        if avg_train_loss < train_losses[-2]: 
-            best_loss = avg_train_loss
-            best_epoch = epoch
-            model_path = checkpoint(model, f"model_{unique_id}.pth")
+    # if len(train_losses) != 1:
+    #     if avg_train_loss < train_losses[-2]: 
+    #         best_loss = avg_train_loss
+    #         best_epoch = epoch
+    #         model_path = checkpoint(model, f"model_{unique_id}.pth")
+    if avg_val_loss < best_validation_loss:
+        best_epoch = epoch
+        model_path = checkpoint(model, f"model_{unique_id}.pth")
+        best_training_loss = avg_train_loss
+        best_validation_loss = avg_val_loss
 
 # record training, validationg losses, weight updates, and the result model path
+history_dict['best_epoch'] = best_epoch
+history_dict['best_val'] = best_validation_loss
+history_dict['best_train'] = best_training_loss
 history_dict['training'] = train_losses
 history_dict['validation'] = val_losses
 history_dict['weights'] = weights_change_epochs
@@ -213,7 +223,7 @@ def experiment_records(row_data, file_path = 'experiment records.csv'):
 experiment_records(history_dict)
 
 
-print(f"Best training loss: {best_loss}, at epoch: {best_epoch}")
+print(f"Best validation loss: {best_validation_loss}, at epoch: {best_epoch}")
 #print("RMSE: %.2f" % np.sqrt(best_mse))
 print('Number of total training samples: ', X_train.shape[0])
 
