@@ -133,11 +133,11 @@ def ga_algorithm(target_t_traces, target_params):
 
     gens_best_sol = [] # the best idividuals at each generation in gens_collect
 
-    no_of_generations = 10 # decide iterations
+    no_of_generations = 300 # decide iterations
 
     # decide, population size or no of individuals or solutions being considered in each generation
     # population_size = 1000#300
-    population_size = 2000#300
+    population_size = 6000#300
 
 
     # chromosome (also called individual) in DEAP
@@ -488,7 +488,7 @@ def ga_algorithm(target_t_traces, target_params):
     elapsed_time = end_time - start_time
     history_dict['time'] = elapsed_time
 
-    def experiment_records(row_data, file_path = 'GA records parallel.csv'): 
+    def experiment_records(row_data, file_path = 'GA records 300gen 6000pop.csv'): 
         '''
         row_data is a dictionary of the row_data we want to store
         '''
