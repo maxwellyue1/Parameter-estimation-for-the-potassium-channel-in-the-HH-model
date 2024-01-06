@@ -1,6 +1,7 @@
 import sympy as sym
 import numpy as np
 import pandas as pd
+import multiprocessing
 
 # define symbols
 t = sym.Symbol('t')
@@ -57,36 +58,46 @@ num_params = 8
 sensitivity_coef_matrices = np.zeros((num_matrices, len(traces_Vs) * len(t_points), num_params))
 
 
-# calculating the sensitivity coefficient matrix
-for i in range(1000): # iterating thru all matrices/samples
-    col = 0
-    
-    params_sub = {g_max:0, E_rev:0, M_ma:0, M_mb:0, V_2ma:0, V_2mb:0, s_ma:0, s_mb:0}
-    for p in list(params_sub.keys()):   # assign the subs of parameters of ith sample
-        params_sub[p] = params_test[str(p)][i]
-
-
-    for param in list(params_sub.keys()):   # iterate thru param to be integrated
-        row = 0
-
-        # params_sub.pop(param, None) # remove the integrated param from params to be subbed
-        # for p in list(params_sub.keys()):   # assign the subs of parameters of ith sample
-        #     params_sub[p] = params_test[str(p)][i]
-
-
-        # log entries on a col
-        for point in t_points: 
-            params_sub[t] = point
-            for trace in traces_Vs: 
-                params_sub[prestep_V] = trace[0]
-                params_sub[step_V] = trace[1]
-                
-                sensitivity_coef_matrices[i, row, col] = sym.diff(I, param).subs(params_sub).evalf()
-
-                row += 1
+# Function to calculate sensitivity coefficients for a subset of matrices
+def calculate_sensitivity_coefficients(start_idx, end_idx, t_points, traces_Vs, params_test, sensitivity_coef_matrices, I):
+    for i in range(start_idx, end_idx):
+        col = 0
+        params_sub = {g_max: 0, E_rev: 0, M_ma: 0, M_mb: 0, V_2ma: 0, V_2mb: 0, s_ma: 0, s_mb: 0}
         
-        col += 1
-        # params_sub = {g_max:0, E_rev:0, M_ma:0, M_mb:0, V_2ma:0, V_2mb:0, s_ma:0, s_mb:0}
+        for p in list(params_sub.keys()):
+            params_sub[p] = params_test[str(p)][i]
+
+        for param in list(params_sub.keys()):
+            row = 0
+            for point in t_points:
+                params_sub[t] = point
+                for trace in traces_Vs:
+                    params_sub[prestep_V] = trace[0]
+                    params_sub[step_V] = trace[1]
+                    sensitivity_coef_matrices[i, row, col] = sym.diff(I, param).subs(params_sub).evalf()
+                    row += 1
+
+            col += 1
+
+# Number of processes (adjust as needed)
+num_processes = 4
+
+# Divide the work among processes
+indices_per_process = len(params_test) // num_processes
+processes = []
+
+# Create and start processes
+for i in range(num_processes):
+    start_idx = i * indices_per_process
+    end_idx = (i + 1) * indices_per_process if i < num_processes - 1 else len(params_test)
+    
+    process = multiprocessing.Process(target=calculate_sensitivity_coefficients, args=(start_idx, end_idx, t_points, traces_Vs, params_test, sensitivity_coef_matrices, I))
+    processes.append(process)
+    process.start()
+
+# Wait for all processes to finish
+for process in processes:
+    process.join()
 
     
 norms = np.linalg.norm(sensitivity_coef_matrices[0], axis=0)
@@ -95,4 +106,3 @@ print("2-norms of each column vector:")
 print(norms)
 print(norms2)
 
-np.save('sensitivity_coeff_matrix.npy', sensitivity_coef_matrices)
