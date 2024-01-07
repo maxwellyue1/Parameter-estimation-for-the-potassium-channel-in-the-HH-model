@@ -80,7 +80,7 @@ def calculate_sensitivity_coefficients(start_idx, end_idx, t_points, traces_Vs, 
             col += 1
 
 # Number of processes (adjust as needed)
-num_processes = 4
+num_processes = 50
 
 # Divide the work among processes
 indices_per_process = len(params_test) // num_processes
@@ -106,3 +106,4 @@ print("2-norms of each column vector:")
 print(norms)
 print(norms2)
 
+np.save('sensitivity_coeff_matrix_parallel.npy', sensitivity_coef_matrices)
