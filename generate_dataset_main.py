@@ -27,7 +27,7 @@ input = {'p': 4,
         'prestep_Vs': np.array([-80, -50, -20]),
         'step_V': 80,
         'prestep_V': -100,  #mV
-        'end_time': 120,
+        'end_time': 6,
         'time_step': 0.01,
         'X_h': X_h,
         'param_bounds_wo_h': param_bounds_wo_h}

@@ -9,7 +9,7 @@ I = sym.Symbol('I')
 m = sym.Symbol('m')
 m_inf = sym.Symbol('m_inf')
 
-p = sym.Symbol('p')
+# p = sym.Symbol('p')
 
 prestep_V = sym.Symbol('prestep_V')
 step_V = sym.Symbol('step_V')
@@ -38,8 +38,8 @@ I = g_max * m ** 4 * (step_V - E_rev)
 
 
 # define substitutions
-t_points = np.arange(0.0, 120, 0.01) 
-sim_p = 4
+t_points = np.arange(0.0, 6, 0.01) 
+# sim_p = 4
 
 sim_prestep_V = -100
 prestep_Vs = [-80, -50, -20]
