@@ -24,6 +24,17 @@ class potassium_channel_dataset_genaerator:
         self.maximum_current = self.param_bounds_wo_h['g_max'][1] * np.max(np.append(self.step_Vs, self.step_V))
 
 
+    def generate_data_w_params(self, params): 
+        # params is a (n, 8) matrix
+        self.params = params
+        n_sample = params.shape[0]
+
+        self.current_traces_3d = np.empty((n_sample, len(self.step_Vs)+len(self.prestep_Vs), len(self.t)))
+        for n in range(n_sample):
+            model = HH_model(self.p, self.q, self.params[n, 0], self.params[n, 1], self.params[n, 2:], self.X_h, self.prestep_V, self.step_Vs, self.prestep_Vs, self.step_V, self.t)
+            self.current_traces_3d[n] = model.generate_current_trace()
+
+
     def generate_data(self, n_sample):
         #np.random.seed(self.random_seed)
 
