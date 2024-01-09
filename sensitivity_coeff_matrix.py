@@ -58,7 +58,7 @@ sensitivity_coef_matrices = np.zeros((num_matrices, len(traces_Vs) * len(t_point
 
 
 # calculating the sensitivity coefficient matrix
-for i in range(1000): # iterating thru all matrices/samples
+for i in range(2): # iterating thru all matrices/samples
     col = 0
     
     params_sub = {g_max:0, E_rev:0, M_ma:0, M_mb:0, V_2ma:0, V_2mb:0, s_ma:0, s_mb:0}
