@@ -48,7 +48,6 @@ dataset_generator = potassium_channel_dataset_genaerator(input)
 
 
 iter = 100
-i=0
 
 for i in range(iter): 
     dataset_generator.generate_data(1000)
@@ -63,4 +62,3 @@ for i in range(iter):
     else:
         dataset_generator.create_empty_csv("dataset.csv")
         
-    i += 1
