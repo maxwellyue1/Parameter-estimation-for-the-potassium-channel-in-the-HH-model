@@ -47,18 +47,18 @@ dataset_generator = potassium_channel_dataset_genaerator(input)
 #     dataset_generator.create_empty_csv()
 
 
-iter = 100
+iter = 1
 
 for i in range(iter): 
-    dataset_generator.generate_data(1000)
+    dataset_generator.generate_data(1100)
     dataset_generator.find_illed_samples()
     dataset_generator.find_small_current_samples()
     dataset_generator.delete_illed_small_samples()
     dataset_generator.collect_points()
 
-    if os.path.isfile("dataset.csv"):
+    if os.path.isfile("dataset_test_new.csv"):
         # file exists
-        dataset_generator.save_tubular_data("dataset.csv")
+        dataset_generator.save_tubular_data("dataset_test_new.csv")
     else:
-        dataset_generator.create_empty_csv("dataset.csv")
+        dataset_generator.create_empty_csv("dataset_test_new.csv")
         
