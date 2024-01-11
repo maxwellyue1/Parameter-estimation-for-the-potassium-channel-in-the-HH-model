@@ -60,11 +60,9 @@ sensitivity_coef_matrices = np.zeros((num_matrices, len(traces_Vs) * len(t_point
 # calculating the sensitivity coefficient matrix
 for i in range(1000): # iterating thru all matrices/samples
     col = 0
-    
     params_sub = {g_max:0, E_rev:0, M_ma:0, M_mb:0, V_2ma:0, V_2mb:0, s_ma:0, s_mb:0}
     for p in list(params_sub.keys()):   # assign the subs of parameters of ith sample
         params_sub[p] = params_test[str(p)][i]
-
 
     for param in list(params_sub.keys()):   # iterate thru param to be integrated
         row = 0
@@ -72,7 +70,6 @@ for i in range(1000): # iterating thru all matrices/samples
         # params_sub.pop(param, None) # remove the integrated param from params to be subbed
         # for p in list(params_sub.keys()):   # assign the subs of parameters of ith sample
         #     params_sub[p] = params_test[str(p)][i]
-
 
         # log entries on a col
         for point in t_points: 
