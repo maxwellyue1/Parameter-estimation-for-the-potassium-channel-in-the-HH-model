@@ -5,6 +5,8 @@ class HH_model_exp:
     '''
     In this model, we only consider the Potassium channel with activation (m) gates. 
     The opening and closing rates are modelled using an exponential form described in HH_model.pdf
+    This class can generate current traces based on params and simulation setups.
+    It can also check various conditions: threshold on current traces, m_infty conditions. 
     '''
     def __init__(self, params, sim_setup):
         # params and sim_setup are both dict
@@ -16,6 +18,8 @@ class HH_model_exp:
         self.delta_m = params['delta_m']
         self.s_m = params['s_m']
 
+        self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+
         self.prestep_V = sim_setup['prestep_V']
         self.step_Vs = sim_setup['step_Vs']
         self.t = sim_setup['t']
@@ -23,9 +27,8 @@ class HH_model_exp:
     def m_infty(self, V): 
     # Find the steady-state curve at a fixed V, x goes to steady_state as t increses
     # V: membrane voltage
-        V_2m = - self.s_m * np.log(self.b_m / self.a_m)
         # V_2m is only defined for steady state and time constant
-        return 1 / (1 + np.exp((V - V_2m) / self.s_m))
+        return 1 / (1 + np.exp((V - self.V_2m) / self.s_m))
     
     
     def tau_m(self, V): 
@@ -33,9 +36,8 @@ class HH_model_exp:
         Find the time constant curve at a fixed V, it governs the rate at which x approaches to the steady state at a fixed V.
         V: membrane voltage
         '''
-        V_2m = - self.s_m * np.log(self.b_m / self.a_m)
-        tau_0m = (1 / self.a_m) * np.exp((self.delta_m * V_2m) / self.s_m)
-        return (tau_0m * np.exp(self.delta_m * ((V - V_2m) / self.s_m))) / (1 + np.exp((V - V_2m) / self.s_m))
+        tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+        return (tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))
 
     # Construct the model
     def alpha(self, V): 
@@ -76,14 +78,35 @@ class HH_model_exp:
         check for current steady state threshold condition: if any one of the traces varies over the threshold through all simulation time, then fails
         record the threshold index for data pts collection 
         '''
+        check = True
         # iterating over the number of traces
         for i in range(self.current_traces.shape[0]): 
             diff_arr = np.abs((self.current_traces[i, :][1:] - self.current_traces[i, :][:-1]) / (self.current_traces[i, :][:-1] - self.current_traces[i, :][0]))
             if np.where(diff_arr < threshold)[0].size == 0:
+                check = False
                 print(f'{self.params} generates currents with undefined threshold!')
                 break
             else: 
                 self.max_index_array[i] = np.where(diff_arr > threshold)[0][-1] + 1
+        return check
+    
+    def m_infty_dev(self, V): 
+        return - np.exp((V - self.V_2m) / self.s_m) / (self.s_m * (1 + np.exp((V - self.V_2m) / self.s_m)) ** 2)
 
+    def check_steady_state_curve(self, ends_threshold=0.1, mid_pt_sensitivity_ub=1/40):
+        '''
+        We check the if there are (num_pts) observable pts on the steady state curve. 
+        the observable pts on the cuve are from the current traces steady states
+        ends_threshold: the upper bound on the m_inf(V_1), and the lower bound on m_inf(V_n)
+        mid_pt_sensitivity_ub: the upper bound on dm_inf(V_2m)/dt
+        '''
+        V_1 = self.step_Vs[0]
+        V_n = self.step_Vs[-1]
 
-    def V_2m_check(self, )
+        if (self.m_infty(V_1) > ends_threshold) or (self.m_infty(V_n) < ends_threshold) or (self.m_infty_dev(self.V_2m) > mid_pt_sensitivity_ub):
+            check = False
+        else: 
+            check = True
+
+        return check
+
