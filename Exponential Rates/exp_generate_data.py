@@ -1,11 +1,14 @@
 import numpy as np
-from hh_model import HH_model
+from exp_hh_model import HH_model_exp
 import csv
 
-class potassium_channel_dataset_genaerator:
-    # we could set the random_seed if we want to regenerate the data
-    # No random_seed when collecting data into file
-    def __init__(self, inputs):#, random_seed = 42):
+class cretiria_check:
+    '''
+    This  class should be initiated by a set of parameters
+    containing fcts to check threshold creterias
+    used to check if a set of parameters satisfis the cretirias
+    '''
+    def __init__(self, params, sim_setup):#, random_seed = 42):
         #self.random_seed = random_seed
 
         self.p = inputs['p']
@@ -89,7 +92,7 @@ class potassium_channel_dataset_genaerator:
         # initialize 
         self.max_index_array = np.full((self.current_traces_3d.shape[0], n_traces), -1)
                 
-        # list containing the illed sample(current traves that barely varies)
+            # list containing the illed sample(current traves that barely varies)
         self.illed_sample = []
 
         # Ignore the divide by zero warning

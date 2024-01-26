@@ -67,6 +67,23 @@ class HH_model_exp:
         generate current traces according to the setup
         '''
 
-        current_traces = np.array([self.find_I(v) for v in self.step_Vs])
+        self.current_traces = np.array([self.find_I(v) for v in self.step_Vs])
 
-        return current_traces
+        return self.current_traces
+    
+    def check_threshold(self, threshold = 1e-5): 
+        '''
+        check for current steady state threshold condition: if any one of the traces varies over the threshold through all simulation time, then fails
+        record the threshold index for data pts collection 
+        '''
+        # iterating over the number of traces
+        for i in range(self.current_traces.shape[0]): 
+            diff_arr = np.abs((self.current_traces[i, :][1:] - self.current_traces[i, :][:-1]) / (self.current_traces[i, :][:-1] - self.current_traces[i, :][0]))
+            if np.where(diff_arr < threshold)[0].size == 0:
+                print(f'{self.params} generates currents with undefined threshold!')
+                break
+            else: 
+                self.max_index_array[i] = np.where(diff_arr > threshold)[0][-1] + 1
+
+
+    def V_2m_check(self, )
