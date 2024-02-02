@@ -31,7 +31,7 @@ class Traces_Dataset(Dataset):
         return self.inputs[idx], self.params[idx]
     
     
-    def split_dataset(self, train_ratio, val_ratio, test_ratio):
+    def split_dataset(self, train_ratio, val_ratio, test_ratio=0):
         assert train_ratio + val_ratio + test_ratio == 1, "The sum of the ratios should be 1"
         train_size = int(len(self) * train_ratio)
         val_size = int(len(self) * val_ratio)

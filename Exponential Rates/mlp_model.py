@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.init as init
 
 
-class Net(nn.Module): 
+class MLP(nn.Module): 
     def __init__(self, n_features, n_params):
         super().__init__()
         self.layers = nn.Sequential(
@@ -11,10 +11,10 @@ class Net(nn.Module):
                 nn.SiLU(),
                 nn.Linear(512, 512),
                 nn.SiLU(),
-                nn.Linear(512, 512),
-                nn.SiLU(),
-                nn.Linear(512, 512),
-                nn.SiLU(),
+                # nn.Linear(512, 512),
+                # nn.SiLU(),
+                # nn.Linear(512, 512),
+                # nn.SiLU(),
                 nn.Linear(512, n_params)
             )
         
