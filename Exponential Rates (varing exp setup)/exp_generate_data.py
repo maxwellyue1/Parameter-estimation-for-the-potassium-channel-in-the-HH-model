@@ -88,8 +88,10 @@ class exp_formalism_data_generator:
         return self.dataset.shape
 
    
-    def create_empty_csv(self, file_path = 'dataset_exp.csv'):
+    def create_empty_csv(self, file_name = 'dataset_exp.csv'):
         names = []
+        names.append('prestep_V')
+        names.append('step_V1')
         for i in range(self.n_traces):
             for point in range(self.n_points): 
                 t_name = f't^{int(i)}_{int(point)}'
@@ -104,15 +106,15 @@ class exp_formalism_data_generator:
         # with open(csv_file_path, mode="w", newline="") as file:
         #     pass  # This just creates an empty file
 
-        with open(file_path, mode="w", newline="") as file:
+        with open(file_name, mode="w", newline="") as file:
             csv_writer = csv.writer(file)
             # Write each row of the array to the CSV file
             csv_writer.writerow(names)
         
     
-    def save_tubular_data(self, file_path = 'dataset_exp.csv'):
+    def save_tubular_data(self, file_name = 'dataset_exp.csv'):
         # Open the CSV file in write mode
-        with open(file_path, mode="a", newline="") as file:
+        with open(file_name, mode="a", newline="") as file:
             csv_writer = csv.writer(file)
             # Write each row of the array to the CSV file
             for row in self.dataset:

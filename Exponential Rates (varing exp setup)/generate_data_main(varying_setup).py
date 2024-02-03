@@ -20,9 +20,11 @@ exp_setupNbounds = {'prestep_V_bounds': (-120, -60), 'step_Vs_lb': (-50, 10), 'n
 data_generator = exp_formalism_data_generator(params_bounds, exp_setupNbounds)
 data_generator.generate_data(10)
 
+script_dir = os.getcwd()
 file_name = "dataset_exp_test.csv"
-if os.path.isfile(file_name):
+file_path = os.path.join(script_dir, file_name)
+if os.path.isfile(file_path):
     # file exists
-    data_generator.save_tubular_data(file_name)
+    data_generator.save_tubular_data(file_path)
 else:
-    data_generator.create_empty_csv(file_name)
+    data_generator.create_empty_csv(file_path)
