@@ -1,0 +1,17 @@
+/localscratch/spool/slurmd/job25157385/slurm_script: line 5: ENV/bin/activate: No such file or directory
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:85: RuntimeWarning: divide by zero encountered in divide
+  diff_arr = np.abs((self.current_traces[i, :][1:] - self.current_traces[i, :][:-1]) / (self.current_traces[i, :][:-1] - self.current_traces[i, :][0]))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:31: RuntimeWarning: overflow encountered in exp
+  return 1 / (1 + np.exp((V - self.V_2m) / self.s_m))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:40: RuntimeWarning: overflow encountered in exp
+  return (tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  return (tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:61: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:61: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:85: RuntimeWarning: invalid value encountered in divide
+  diff_arr = np.abs((self.current_traces[i, :][1:] - self.current_traces[i, :][:-1]) / (self.current_traces[i, :][:-1] - self.current_traces[i, :][0]))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exponential Rates/exp_hh_model.py:61: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
