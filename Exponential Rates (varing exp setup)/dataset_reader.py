@@ -1,6 +1,7 @@
 import torch
 import numpy as np
 from torch.utils.data import Dataset, DataLoader, random_split
+from exp_hh_model import HH_model_exp
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -11,16 +12,30 @@ class Traces_Dataset(Dataset):
         
         self.prestep_V = df[:, 0]
         self.step_V1 = df[:, 1]
+        self.num_traces = num_traces
         self.time_traces = torch.reshape(df[:, 2:(2+num_traces*num_pts)],(-1, num_traces, num_pts))
         self.current_traces = torch.reshape(df[:, 2+(num_traces*num_pts):2+(num_traces*num_pts*2)], (-1, num_traces, num_pts))
         self.inputs = df[:, 0:(num_traces*num_pts*2)]
         self.params = df[:, (2+num_traces*num_pts*2):]
 
     def plot(self, sample): 
-        for i in range(12): 
-            plt.plot(self.time_traces[sample, i], self.current_traces[sample, i], label=f"{i}")
+        # compare samples and simulations using sample params
+        params_list = self.params[sample].tolist()
+        params = {'p': params_list[0], 'g_max': params_list[1], 'E_rev': params_list[2], 'a_m': params_list[3], 'b_m': params_list[4], 'delta_m': params_list[5], 's_m': params_list[6]}
+
+        step_Vs = np.arange(self.step_V1[sample], self.step_V1[sample]+11*10, 10)
+        sim_setup = {'prestep_V': self.prestep_V[sample].numpy(), 'step_Vs': step_Vs, 't': np.arange(0.0, 6.0, 0.01)}
+
+        model = HH_model_exp(params, sim_setup)
+        current_traces_sim = model.simulation()
+
+        colors = ['blue', 'red', 'green', 'purple', 'orange', 'yellow', 'cyan', 'magenta', 'brown', 'gray', 'black']
+
+        for step in range(self.num_traces): 
+            plt.plot(self.time_traces[sample, step], self.current_traces[sample, step], color=colors[step])
+            plt.plot(sim_setup['t'], current_traces_sim[step], linestyle='--', color=colors[step])
         plt.legend()
-        plt.title(f'sample {sample}')
+        plt.title(f'sample {sample}; prestep_V: {self.prestep_V[sample]}; step_V1: {self.step_V1[sample]}')
 
 
     def __len__(self):
