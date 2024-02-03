@@ -15,8 +15,9 @@ sim_setup = {'prestep_V': -100, 'step_Vs': np.linspace(-20, 100, 13), 't': np.ar
 data_generator = exp_formalism_data_generator(params_bounds, sim_setup)
 data_generator.generate_data(1000)
 
-if os.path.isfile("dataset_exp_test.csv"):
+file_name = "dataset_exp_test.csv"
+if os.path.isfile(file_name):
     # file exists
-    data_generator.save_tubular_data()
+    data_generator.save_tubular_data(file_name)
 else:
-    data_generator.create_empty_csv()
+    data_generator.create_empty_csv(file_name)
