@@ -18,7 +18,7 @@ exp_setupNbounds = {'prestep_V_bounds': (-120, -60), 'step_Vs_lb': (-50, 10), 'n
 # sim_setup = {'prestep_V': -100, 'step_Vs': np.linspace(-20, 100, 13), 't': np.arange(0.0, 6.0, 0.01)}
 
 data_generator = exp_formalism_data_generator(params_bounds, exp_setupNbounds)
-data_generator.generate_data(3000)
+data_generator.generate_data(7000)
 
 script_dir = os.getcwd()
 file_name = "dataset_exp.csv"
