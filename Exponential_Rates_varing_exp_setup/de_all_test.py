@@ -7,6 +7,10 @@ from scipy.optimize import differential_evolution
 
 dataset = Traces_Dataset('dataset_exp_new.csv')
 
+params = dataset.params.numpy()
+current_traces = dataset.current_traces.numpy()
+time_traces = dataset.time_traces.numpy()
+
 def obj(x, *args): 
     '''
     x: a 1-D array of the variables for the obj function (the parameters we are estimating)
@@ -37,10 +41,7 @@ bounds = [params_searching_bounds['p'], params_searching_bounds['g_max'], params
 mse_list = []
 
 for sample in range(dataset.__len__()): 
-    params = dataset.params.numpy()
-    current_traces = dataset.current_traces.numpy()
-    time_traces = dataset.time_traces.numpy()
-
+    
     prestep_V_2d = dataset.prestep_V[sample].numpy().reshape(-1,1)
     step_Vs_2d = (np.arange(dataset.step_V1[sample].numpy(), dataset.step_V1[sample].numpy() + dataset.num_traces*10, 10)).reshape(-1,1)
     t = time_traces[sample]
