@@ -115,3 +115,35 @@ class HH_model_exp:
 
         return check
 
+    
+    def collect_points(self, n_points): 
+        '''
+        this takes point for the current_traces of 1 sample 
+        pass in model of class HH_model_exp
+        '''
+        # clean_data_evenly_vertically_spaced
+        n_traces = self.current_traces.shape[0]
+        t = self.t # simulation time
+        collected_t = np.empty((n_traces, n_points))  # (n_traces, n_points)
+        collected_current_traces = np.empty((n_traces, n_points))
+
+        for i in range(n_traces):    # over the number of traces
+            index_array = []  # the index array we are taking for the time points and values for current traces
+            # it is specific for each sample and current trace
+            min_val_inatrace = self.current_traces[i, 0]  # min value for a specific trace
+            max_val_inatrace = self.current_traces[i, self.max_index_array[i]]  # max value for a specific trace
+            target_values = np.linspace(min_val_inatrace, max_val_inatrace, n_points)  # target values array
+
+            collected_t[i, 0] = t[0]
+            collected_t[i, -1] = t[self.max_index_array[i]]
+            collected_current_traces[i] = target_values
+
+
+            arr = self.current_traces[i, 0 : (self.max_index_array[i]+2)]  # the specific cropped current trace searching in
+            # we added 2, 1 for the python indexing, 1 to handle exception when finding index
+            for pt in range(1, n_points - 1):  # iterate over the number of points 
+                num = target_values[pt]  # the target current value at a specific point
+                index = np.argmin((num - arr) >= 0)-1  # the index in arr with the current value on the left of the num
+                # apply linear approximation to get selected time point
+                collected_t[i, pt] = t[index] + (t[index+1] - t[index]) * (num - self.current_traces[i, index]) / (self.current_traces[i, index+1] - self.current_traces[i, index])
+        return collected_t, collected_current_traces

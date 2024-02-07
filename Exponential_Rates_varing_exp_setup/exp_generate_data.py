@@ -17,37 +17,37 @@ class exp_formalism_data_generator:
         self.n_points = n_points
 
     
-    def collect_points(self, model): 
-        '''
-        this takes point for the current_traces of 1 sample 
-        pass in model of class HH_model_exp
-        '''
-        # clean_data_evenly_vertically_spaced
-        n_traces = model.current_traces.shape[0]
-        t = self.t # simulation time
-        collected_t = np.empty((n_traces, self.n_points))  # (n_traces, n_points)
-        collected_current_traces = np.empty((n_traces, self.n_points))
+    # def collect_points(self, model): 
+    #     '''
+    #     this takes point for the current_traces of 1 sample 
+    #     pass in model of class HH_model_exp
+    #     '''
+    #     # clean_data_evenly_vertically_spaced
+    #     n_traces = model.current_traces.shape[0]
+    #     t = self.t # simulation time
+    #     collected_t = np.empty((n_traces, self.n_points))  # (n_traces, n_points)
+    #     collected_current_traces = np.empty((n_traces, self.n_points))
 
-        for i in range(n_traces):    # over the number of traces
-            index_array = []  # the index array we are taking for the time points and values for current traces
-            # it is specific for each sample and current trace
-            min_val_inatrace = model.current_traces[i, 0]  # min value for a specific trace
-            max_val_inatrace = model.current_traces[i, model.max_index_array[i]]  # max value for a specific trace
-            target_values = np.linspace(min_val_inatrace, max_val_inatrace, self.n_points)  # target values array
+    #     for i in range(n_traces):    # over the number of traces
+    #         index_array = []  # the index array we are taking for the time points and values for current traces
+    #         # it is specific for each sample and current trace
+    #         min_val_inatrace = model.current_traces[i, 0]  # min value for a specific trace
+    #         max_val_inatrace = model.current_traces[i, model.max_index_array[i]]  # max value for a specific trace
+    #         target_values = np.linspace(min_val_inatrace, max_val_inatrace, self.n_points)  # target values array
 
-            collected_t[i, 0] = t[0]
-            collected_t[i, -1] = t[model.max_index_array[i]]
-            collected_current_traces[i] = target_values
+    #         collected_t[i, 0] = t[0]
+    #         collected_t[i, -1] = t[model.max_index_array[i]]
+    #         collected_current_traces[i] = target_values
 
 
-            arr = model.current_traces[i, 0 : (model.max_index_array[i]+2)]  # the specific cropped current trace searching in
-            # we added 2, 1 for the python indexing, 1 to handle exception when finding index
-            for pt in range(1, self.n_points - 1):  # iterate over the number of points 
-                num = target_values[pt]  # the target current value at a specific point
-                index = np.argmin((num - arr) >= 0)-1  # the index in arr with the current value on the left of the num
-                # apply linear approximation to get selected time point
-                collected_t[i, pt] = t[index] + (t[index+1] - t[index]) * (num - model.current_traces[i, index]) / (model.current_traces[i, index+1] - model.current_traces[i, index])
-        return collected_t, collected_current_traces
+    #         arr = model.current_traces[i, 0 : (model.max_index_array[i]+2)]  # the specific cropped current trace searching in
+    #         # we added 2, 1 for the python indexing, 1 to handle exception when finding index
+    #         for pt in range(1, self.n_points - 1):  # iterate over the number of points 
+    #             num = target_values[pt]  # the target current value at a specific point
+    #             index = np.argmin((num - arr) >= 0)-1  # the index in arr with the current value on the left of the num
+    #             # apply linear approximation to get selected time point
+    #             collected_t[i, pt] = t[index] + (t[index+1] - t[index]) * (num - model.current_traces[i, index]) / (model.current_traces[i, index+1] - model.current_traces[i, index])
+    #     return collected_t, collected_current_traces
     
 
     def generate_data(self, n_sample):
@@ -78,7 +78,7 @@ class exp_formalism_data_generator:
             model.simulation()
 
             if model.check_current_ss() and model.check_steady_state_curve(): 
-                collected_t, collected_current_traces = self.collect_points(model)
+                collected_t, collected_current_traces = model.collect_points(self.n_points)
                 # print(collected_t.shape, collected_current_traces.shape, np.array(list(params.values())).shape)
                 data = np.concatenate((collected_t.flatten(), collected_current_traces.flatten(), np.array(list(params.values()))))
                 self.dataset[count, 2:] = data
