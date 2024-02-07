@@ -4,7 +4,7 @@ import torch.nn.init as init
 
 
 class MLP(nn.Module): 
-    def __init__(self, n_features, n_params):
+    def __init__(self, n_features, n_params=7):
         super().__init__()
         self.layers = nn.Sequential(
                 nn.Linear(n_features, 512),

@@ -69,4 +69,8 @@ class Traces_Dataset(Dataset):
         # normalize the rest of the features
         self.inputs = (self.inputs - self.train_mean) / (self.train_std + 1e-8)
 
+    def normalize_test(self, normalized_mean, normalized_std): 
+        # normalize the rest of the features
+        self.inputs = (self.inputs - normalized_mean) / (normalized_std + 1e-8)
+
    
