@@ -39,6 +39,7 @@ params_searching_bounds = {
 }
 
 mses_ith_samples_list=[]
+nit_ith_samples_list = []
 
 for i in range(dataset.num_params):
     i = 3
@@ -46,6 +47,7 @@ for i in range(dataset.num_params):
     bounds = [params_searching_bounds[key_at_index]]
 
     mses_ith_samples = []
+    nit_ith_samples = []
     for sample in range(dataset.__len__()): 
 
         prestep_V_2d = dataset.prestep_V[sample].numpy().reshape(-1,1)
@@ -57,15 +59,21 @@ for i in range(dataset.num_params):
         # sim setup for obj evaluation model
         sim_setup_2d = {'prestep_V': prestep_V_2d, 'step_Vs': step_Vs_2d, 't': t}   
 
-        result = differential_evolution(obj_i_param, bounds, args=(i, sim_setup_2d, target_params), maxiter=500)
+        result = differential_evolution(obj_i_param, bounds, args=(i, sim_setup_2d, target_params), maxiter=5000)
         mse_ith = (target_params[i] - result.x) ** 2
         mses_ith_samples.append(mse_ith)
+        nit_ith = result.nit
+        nit_ith_samples.append(nit_ith)
 
     mses_ith_samples = np.array(mses_ith_samples)
-    print(mses_ith_samples.shape)
+    nit_ith_samples = np.array(nit_ith_samples).reshape(-1, 1)
+    print(mses_ith_samples.shape, nit_ith_samples.shape)
     mses_ith_samples_list.append(mses_ith_samples)
-    print(len(mses_ith_samples_list))
+    nit_ith_samples_list.append(nit_ith_samples)
+    print(len(mses_ith_samples_list), len(nit_ith_samples_list))
 
 mses_ith_samples_mat = np.hstack(mses_ith_samples_list)
-print(mses_ith_samples_mat.shape)
+nit_ith_samples_mat = np.hstack(nit_ith_samples_list)
+print(mses_ith_samples_mat.shape, nit_ith_samples_mat.shape)
 np.save('de_mses_on_ith_params.npy', mses_ith_samples_mat)
+np.save('de_nit_on_ith_params.npy', nit_ith_samples_mat)
