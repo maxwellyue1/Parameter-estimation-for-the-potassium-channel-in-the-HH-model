@@ -6,19 +6,19 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 class Traces_Dataset(Dataset): 
-    def __init__(self, csv_file, num_traces = 11, num_pts = 20, num_params = 7):
+    def __init__(self, csv_file, num_traces = 8, num_pts = 20, num_params = 7):
         chunk = pd.read_csv(csv_file,chunksize=10000)
         df = torch.from_numpy(pd.concat(chunk).values).to(torch.float32)
         
         self.prestep_V = df[:, 0]
-        self.step_V1 = df[:, 1]
+        self.step_Vs = df[:, 1:(1+num_traces)]
         self.num_traces = num_traces
         self.num_pts = num_pts
         self.num_params = num_params
-        self.time_traces = torch.reshape(df[:, 2:(2+num_traces*num_pts)],(-1, num_traces, num_pts))
-        self.current_traces = torch.reshape(df[:, 2+(num_traces*num_pts):2+(num_traces*num_pts*2)], (-1, num_traces, num_pts))
-        self.inputs = df[:, 0:(num_traces*num_pts*2+2)]
-        self.params = df[:, (2+num_traces*num_pts*2):]
+        self.time_traces = torch.reshape(df[:, (1+num_traces):((1+num_traces)+num_traces*num_pts)],(-1, num_traces, num_pts))
+        self.current_traces = torch.reshape(df[:, (1+num_traces)+(num_traces*num_pts):(1+num_traces)+(num_traces*num_pts*2)], (-1, num_traces, num_pts))
+        self.inputs = df[:, 0:(num_traces*num_pts*2 + (1+num_traces))]
+        self.params = df[:, ((1+num_traces) + num_traces * num_pts * 2):]
 
     def plot(self, sample): 
         # compare samples and simulations using sample params
