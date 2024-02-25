@@ -102,3 +102,48 @@ class exp_formalism_data_generator:
                 csv_writer.writerow(row)
 
     
+    def generate_data_dotty_plots(self, n_sample):
+        '''
+        generate data for dotty plots. 
+        (n_samples, n_traces + n_traces * len(t) + len(params_bounds))
+                    max_index_array, current_traces, params
+        '''
+        count = 0
+        self.dataset = np.empty((n_sample, self.n_traces + self.n_traces * len(self.t) + len(self.params_bounds)))
+        # print(self.dataset.shape)
+        while count < n_sample: 
+            sim_setup = {'t':self.t}
+            params = {}
+
+            # get the sim_setup
+            #     are taken to be a multiple of 2 within the bounds defined.
+            # prestep_V, dV and V_0  can be any int within the predefined range. 
+
+            # prestep_V = np.random.randint(self.prestep_V_bounds[0]//2, self.prestep_V_bounds[1]//2 + 1) * 2
+            prestep_V = np.random.randint(self.prestep_V_bounds[0], self.prestep_V_bounds[1] + 1)
+            step_V1 = np.random.randint(self.step_Vs_lb[0], self.step_Vs_lb[1] + 1)
+            dV = np.random.randint(self.dV_bd[0], self.dV_bd[1] + 1)
+            step_Vs = np.arange(step_V1, step_V1 + self.n_traces*dV, dV)
+
+            sim_setup['prestep_V'] = prestep_V
+            sim_setup['step_Vs'] = step_Vs
+            self.dataset[count, :(1 + self.n_traces)] = np.insert(step_Vs, 0, prestep_V)
+
+            # get the params
+            for p_name in list(self.params_bounds.keys()): 
+                if p_name == 'p': 
+                    params[p_name] = np.random.randint(self.params_bounds[p_name][0], self.params_bounds[p_name][1] + 1) # handle the numpy take open upper bd
+                else:
+                    params[p_name] = np.random.uniform(self.params_bounds[p_name][0], self.params_bounds[p_name][1])
+
+            model = HH_model_exp(params, sim_setup)
+            model.simulation()
+
+            if model.check_current_ss() and model.check_steady_state_curve(): 
+                # collected_t, collected_current_traces = model.collect_points(self.n_points)
+                # print(collected_t.shape, collected_current_traces.shape, np.array(list(params.values())).shape)
+                data = np.concatenate((model.max_index_array, model.current_traces.flatten(), np.array(list(params.values()))))
+                self.dataset[count] = data
+                count += 1
+
+        return self.dataset.shape
