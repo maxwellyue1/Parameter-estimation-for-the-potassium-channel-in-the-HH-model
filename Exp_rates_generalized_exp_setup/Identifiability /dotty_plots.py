@@ -115,3 +115,4 @@ for i in range(params.shape[1]):
     plt.plot(target_params[i], 0, 'ro', markersize=1.5)
     plt.xlabel(params_names[i])
     plt.ylabel('fitness')
+    plt.savefig(f'figure_{params_names[i]}.png')  # Save the figure with a filename based on the parameter name

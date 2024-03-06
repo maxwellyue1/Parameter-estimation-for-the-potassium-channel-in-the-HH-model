@@ -145,5 +145,7 @@ class exp_formalism_data_generator:
                 data = np.concatenate((model.max_index_array, model.current_traces.flatten(), np.array(list(params.values()))))
                 self.dataset[count] = data
                 count += 1
+                if count % 100 == 0:
+                    print(f'generated {count} samples!')
 
         return self.dataset.shape
