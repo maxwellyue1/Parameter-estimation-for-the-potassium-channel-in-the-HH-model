@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+
+import itertools
 import numpy as np
 
 import sys
@@ -10,7 +12,7 @@ from exp_hh_model import HH_model_exp
 
 dataset = Traces_Dataset('../dataset_test.csv')
 
-target_num = 32
+target_num = 9
 target_prestep_V = int(dataset.prestep_V[target_num])
 target_step_V1 = int(dataset.step_Vs[target_num].numpy()[0])
 target_dV = dataset.step_Vs[target_num].numpy()[1] - dataset.step_Vs[target_num].numpy()[0]
@@ -59,24 +61,6 @@ max_ind_arrs = data_generator.dataset[:, :8]
 current_traces = data_generator.dataset[:, 8:-7].reshape(-1, 8, 600)
 params = data_generator.dataset[:, -7:]
 
-sample = 5
-# Plotting 8 traces
-for i in range(8):
-    stop = int(max_ind_arrs[sample, i])
-    target_stop = int(target_max_ind_arr[i])
-    plt.plot(t[:stop], current_traces[sample, i, :stop], color = 'blue', linewidth = 0.5)
-    plt.plot(t[:target_stop], target_current_traces[i, :target_stop], color = 'red', linewidth = 0.5)
-    plt.axvline(x = min(t[stop], t[target_stop]), color='black', linestyle='--', linewidth = 0.5, alpha = 0.7)
-
-
-plt.xlabel('Time')
-plt.ylabel('Current')
-plt.plot([],[], color='blue', label=f'sample')
-plt.plot([],[], color='red', label=f'target')
-plt.plot([],[], color='black', linestyle='--', label='comparison window for different traces')
-plt.legend()
-plt.show()
-
 def obj_trace(sample, trace):
     '''
     find the area difference in the rising phase instead of the whole simulation. 
@@ -107,15 +91,47 @@ for i in range(params.shape[1]):
     param_lists.append(param_list)
 
 
-params_names = list(params_bounds.keys())
 
-for i in range(params.shape[1]):
-    plt.figure()
-    plt.scatter(param_lists[i], fitness_list, alpha=0.6, s=0.5)
-    plt.plot(target_params[i], 0, 'ro', markersize=1.5)
-    plt.xlabel(params_names[i])
-    plt.ylabel('fitness')
-    plt.savefig(f'figure_{params_names[i]}_on_{target_num}_{n_samples}samples.png')  # Save the figure with a filename based on the parameter name
+arr = np.array([0,1,2,3,4,5,6])
 
-np.save(f'param_lists_on_{target_num}_{n_samples}samples.npy', np.array(param_lists))
-np.save(f'fitness_list_on_{target_num}_{n_samples}samples.npy', np.array(fitness_list))
+# Using itertools.combinations
+combinations = list(itertools.combinations(arr, 2))
+
+print(combinations)
+
+# This is just an example, you should modify this according to your specific intervals
+intervals = np.linspace(np.min(fitness_list), np.max(fitness_list), 5)  # Define your intervals here
+colors = ['red', 'green', 'blue', 'yellow', 'black']  # Add more colors if needed
+
+def assign_color(value):
+    for i in range(len(intervals)-1):
+        if intervals[i] <= value < intervals[i+1]:
+            return colors[i]
+    return colors[-1]  # Default color if value doesn't fall into any interval
+
+# Create a subplot grid with 7 rows and 3 columns
+fig, axs = plt.subplots(7, 3, figsize=(15, 30))
+
+for i, ax_row in enumerate(axs):
+    for j, ax in enumerate(ax_row):
+        idx = i * len(ax_row) + j  # Calculate the index of the subplot
+        if idx < len(combinations):
+            x_data = np.array(param_lists[combinations[idx][0]])
+            y_data = np.array(param_lists[combinations[idx][1]])
+        
+            point_colors = [assign_color(value) for value in fitness_list]
+        
+            ax.scatter(x_data, y_data, c=point_colors, alpha=0.9, s=1)
+            # ax.set_title(f'Combination {combinations[idx][0]},{combinations[idx][1]}')
+            ax.set_xlabel(f'{list(params_bounds.keys())[combinations[idx][0]]}')  # Add x-axis label
+            ax.set_ylabel(f'{list(params_bounds.keys())[combinations[idx][1]]}')  # Add y-axis label
+        else:
+            ax.axis('off')  # Hide empty subplots
+
+plt.tight_layout()
+
+plt.savefig(f'2dprojection_on{target_num}_{n_samples}samples.png')
+plt.show()
+
+np.save(f'2d_param_lists_on_{target_num}_{n_samples}samples.npy', np.array(param_lists))
+np.save(f'2d_fitness_list_on_{target_num}_{n_samples}samples.npy', np.array(fitness_list))
