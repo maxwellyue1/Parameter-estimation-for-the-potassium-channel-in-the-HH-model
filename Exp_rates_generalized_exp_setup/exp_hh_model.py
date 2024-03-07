@@ -73,6 +73,24 @@ class HH_model_exp:
 
         return self.current_traces
     
+
+    def threshold_pos(self, threshold = 1e-5):
+        '''
+        only retuen the index of the first value that exceeds the threshold
+        '''
+        self.max_index_array = np.full((len(self.step_Vs)), -1)
+        # iterating over the number of traces
+        for i in range(self.current_traces.shape[0]): 
+            diff_arr = np.abs((self.current_traces[i, :][1:] - self.current_traces[i, :][:-1]) / (self.current_traces[i, :][:-1] - self.current_traces[i, :][0]))
+            if np.where(diff_arr < threshold)[0].size == 0:
+                check = False
+                # print(f'{self.p, self.g_max, self.E_rev, self.a_m, self.b_m, self.delta_m, self.s_m} generates currents with undefined threshold!')
+                break
+            else: 
+                self.max_index_array[i] = np.where(diff_arr > threshold)[0][-1] + 1
+        return self.max_index_array
+
+    
     def check_current_ss(self, threshold = 1e-5, thres_min_ind = 20): 
         '''
         check for current steady state threshold condition: if any one of the traces varies over the threshold through all simulation time, then fails
