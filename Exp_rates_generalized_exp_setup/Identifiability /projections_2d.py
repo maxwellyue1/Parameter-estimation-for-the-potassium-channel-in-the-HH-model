@@ -54,7 +54,7 @@ exp_setupNbounds = {'prestep_V_bounds': (target_prestep_V, target_prestep_V), 's
 # sim_setup = {'prestep_V': -100, 'step_Vs': np.linspace(-20, 100, 13), 't': np.arange(0.0, 6.0, 0.01)}
 
 data_generator = exp_formalism_data_generator(params_bounds, exp_setupNbounds)
-n_samples = 50000
+n_samples = 60000
 data_generator.generate_data_dotty_plots(n_samples)
 
 max_ind_arrs = data_generator.dataset[:, :8]
