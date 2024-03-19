@@ -85,7 +85,7 @@ def process_sample(sample, strategy, popsize, mutation, recombination, init):
     sim_setup_2d = {'prestep_V': prestep_V_2d, 'step_Vs': step_Vs_2d, 't': t}   
 
     start_time = time.time()
-    result = differential_evolution(obj, bounds, args=(sim_setup_2d, target_params), strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init, seed=42, maxiter=300, tol=-1)
+    result = differential_evolution(obj, bounds, args=(sim_setup_2d, target_params), strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init, seed=42, maxiter=1000, tol=-1)
     end_time = time.time()
     
     mse = (target_params - result.x) ** 2
