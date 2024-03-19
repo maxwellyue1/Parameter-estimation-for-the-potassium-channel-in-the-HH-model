@@ -56,7 +56,7 @@ hyperparameters_grid = {
                 'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
                 'randtobest1bin', 'randtobest1exp',
                 'currenttobest1bin', 'currenttobest1exp'],
-    'popsize': [14,28,42,56,70],  # Example popsize hyperparameter
+    'popsize': [70], #[14,28,42,56,70],  # Example popsize hyperparameter
     'mutation': [(0.1, 0.9)],  # Example mutation hyperparameter
     'recombination': [0.9],  # Example recombination hyperparameter
     'init': ['latinhypercube'],  # Example init hyperparameter
