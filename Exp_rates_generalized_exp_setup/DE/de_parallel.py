@@ -56,10 +56,10 @@ hyperparameters_grid = {
                 'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
                 'randtobest1bin', 'randtobest1exp',
                 'currenttobest1bin', 'currenttobest1exp'],
-    'popsize': [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],  # Example popsize hyperparameter
-    'mutation': [0.5, (0.1, 0.9)],  # Example mutation hyperparameter
-    'recombination': [0.1, 0.2, 0.3,0.4, 0.5, 0.6, 0.7, 0.8, 0.9],  # Example recombination hyperparameter
-    'init': ['random', 'sobol', 'latinhypercube'],  # Example init hyperparameter
+    'popsize': [14,28,42,56,70],  # Example popsize hyperparameter
+    'mutation': [(0.1, 0.9)],  # Example mutation hyperparameter
+    'recombination': [0.9],  # Example recombination hyperparameter
+    'init': ['latinhypercube'],  # Example init hyperparameter
 }
 
 
@@ -85,7 +85,7 @@ def process_sample(sample, strategy, popsize, mutation, recombination, init):
     sim_setup_2d = {'prestep_V': prestep_V_2d, 'step_Vs': step_Vs_2d, 't': t}   
 
     start_time = time.time()
-    result = differential_evolution(obj, bounds, args=(sim_setup_2d, target_params), strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init, seed=42, maxiter=300)
+    result = differential_evolution(obj, bounds, args=(sim_setup_2d, target_params), strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init, seed=42, maxiter=300, tol=-1)
     end_time = time.time()
     
     mse = (target_params - result.x) ** 2
@@ -106,7 +106,7 @@ if __name__ == '__main__':
                             process_func = partial(process_sample, strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init)
                             
                             # Map the process function to the sample range using the multiprocessing pool
-                            results = pool.map(process_func, range(10))
+                            results = pool.map(process_func, range(100))
 
                             mse_list = []
                             time_list = []
