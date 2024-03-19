@@ -18,8 +18,8 @@ params = dataset.params.numpy()
 current_traces = dataset.current_traces.numpy()
 time_traces = dataset.time_traces.numpy()
 
-prestep_V_2d_vec = dataset.prestep_V.numpy().reshape(-1,1)
-step_Vs_2d_vec = dataset.step_Vs.numpy().reshape(-1,1)
+prestep_V_vec = dataset.prestep_V.numpy()
+step_Vs_vec = dataset.step_Vs.numpy()
 
 def obj(x, *args): 
     '''
@@ -75,8 +75,8 @@ if not os.path.exists(csv_filename):
 
 
 def process_sample(sample, strategy, popsize, mutation, recombination, init):
-    prestep_V_2d = prestep_V_2d_vec[sample]
-    step_Vs_2d = step_Vs_2d_vec[sample]
+    prestep_V_2d = prestep_V_vec[sample].reshape(-1,1)
+    step_Vs_2d = step_Vs_vec[sample].reshape(-1,1)
     t = time_traces[sample]
     # target_traces = current_traces[sample]
     target_params = params[sample]
