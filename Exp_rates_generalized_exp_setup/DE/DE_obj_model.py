@@ -73,6 +73,9 @@ class de_obj_model:
 
         # self.current_traces = np.array([self.find_I(v) for v in self.step_Vs])
         self.current_traces = self.find_I(self.step_Vs)
+        ##################################
+        #####setting nan values to be 0????????
+        self.current_traces[np.isnan(self.current_traces)] = 0
 
         return self.current_traces
     
