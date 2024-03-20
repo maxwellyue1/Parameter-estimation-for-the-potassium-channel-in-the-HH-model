@@ -56,7 +56,7 @@ hyperparameters_grid = {
                 'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
                 'randtobest1bin', 'randtobest1exp',
                 'currenttobest1bin', 'currenttobest1exp'],
-    'popsize': [70], #[14,28,42,56,70],  # Example popsize hyperparameter
+    'popsize': [63], #[14,28,42,56,70],  # Example popsize hyperparameter
     'mutation': [(0.1, 0.9)],  # Example mutation hyperparameter
     'recombination': [0.9],  # Example recombination hyperparameter
     'init': ['latinhypercube'],  # Example init hyperparameter
@@ -65,7 +65,7 @@ hyperparameters_grid = {
 
 csv_filename = "de_experiment_results_parrallell_try.csv"
 # Define the headers for the CSV file
-csv_headers = ['Strategy', 'Popsize', 'Mutation', 'Recombination', 'Init', 'MSE Overall Avg', 'MSE Overall Std', 'Elapsed Time Avg', 'Elapsed Time Std']
+csv_headers = ['Strategy', 'Popsize', 'MSE Overall Avg', 'MSE Overall Std', 'Elapsed Time Avg', 'Elapsed Time Std']
 
 # Check if the CSV file exists; if not, create and write the headers
 if not os.path.exists(csv_filename):
@@ -123,7 +123,7 @@ if __name__ == '__main__':
                             time_overall_avg = np.mean(time_mat)
                             time_overall_std = np.std(time_mat)
                             
-                            writer.writerow([strategy, popsize, mutation, recombination, init, mse_overall_avg, mse_overall_std, time_overall_avg, time_overall_std])
+                            writer.writerow([strategy, popsize, mse_overall_avg, mse_overall_std, time_overall_avg, time_overall_std])
         
         pool.close()  # Close the pool
         pool.join()   # Wait for all processes to finish before exiting
