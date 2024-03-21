@@ -56,16 +56,16 @@ hyperparameters_grid = {
                 'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
                 'randtobest1bin', 'randtobest1exp',
                 'currenttobest1bin', 'currenttobest1exp'],
-    'popsize': [70], #[14,28,42,56,70],  # Example popsize hyperparameter
+    'popsize': [105], #[14,28,42,56,70],  # Example popsize hyperparameter
     'mutation': [(0.1, 0.9)],  # Example mutation hyperparameter
     'recombination': [0.9],  # Example recombination hyperparameter
     'init': ['latinhypercube'],  # Example init hyperparameter
 }
 
 
-csv_filename = "de_experiment_results_parrallell_try_1000 copy.csv"
+csv_filename = "de_experiment_results_parrallell_try_1000_allmetrics.csv"
 # Define the headers for the CSV file
-csv_headers = ['Strategy', 'Popsize', 'MSE Overall Avg', 'MSE Overall Std', 'Elapsed Time Avg', 'Elapsed Time Std']
+csv_headers = ['Strategy', 'Popsize', 'MSE Overall Avg', 'MSE Overall Std', 'RMSE Overall Avg', 'RMSE Overall Std', 'MAE Overall Avg', 'MAE Overall Std', 'MAPE Overall Avg', 'MAPE Overall Std', 'Elapsed Time Avg',  'Elapsed Time Std']
 
 # Check if the CSV file exists; if not, create and write the headers
 if not os.path.exists(csv_filename):
@@ -89,8 +89,12 @@ def process_sample(sample, strategy, popsize, mutation, recombination, init):
     end_time = time.time()
     
     mse = (target_params - result.x) ** 2
+    rmse = np.sqrt(mse)
+    mae = np.abs(target_params - result.x)
+    mape = np.abs((target_params - result.x) / result.x)
+
     elapsed_time = end_time - start_time
-    return sample, mse, elapsed_time
+    return sample, mse, rmse, mae, mape, elapsed_time
 
 if __name__ == '__main__':
     with open(csv_filename, mode='a', newline='') as file:
@@ -106,24 +110,43 @@ if __name__ == '__main__':
                             process_func = partial(process_sample, strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init)
                             
                             # Map the process function to the sample range using the multiprocessing pool
-                            results = pool.map(process_func, range(100))
+                            results = pool.map(process_func, range(1000))
 
                             mse_list = []
+                            rmse_list = []
+                            mae_list = []
+                            mape_list = []
                             time_list = []
                             for result in results:
-                                sample, mse, elapsed_time = result
+                                sample, mse, rmse, mae, mape, elapsed_time = result
                                 mse_list.append(mse)
+                                rmse_list.append(rmse)
+                                mae_list.append(mae)
+                                mape_list.append(mape)
                                 time_list.append(elapsed_time)
 
                             mse_mat = np.vstack(mse_list)
+                            rmse_mat = np.vstack(rmse_list)
+                            mae_mat = np.vstack(mae_list)
+                            mape_mat = np.vstack(mape_list)
                             time_mat = np.array(time_list).reshape(-1, 1)
 
                             mse_overall_avg = np.mean(mse_mat)
                             mse_overall_std = np.std(np.mean(mse_mat, axis=1))
+
+                            rmse_overall_avg = np.mean(rmse_mat)
+                            rmse_overall_std = np.std(np.mean(rmse_mat, axis=1))
+
+                            mae_overall_avg = np.mean(mae_mat)
+                            mae_overall_std = np.std(np.mean(mae_mat, axis=1))
+
+                            mape_overall_avg = np.mean(mape_mat)
+                            mape_overall_std = np.std(np.mean(mape_mat, axis=1))
+
                             time_overall_avg = np.mean(time_mat)
                             time_overall_std = np.std(time_mat)
                             
-                            writer.writerow([strategy, popsize, mse_overall_avg, mse_overall_std, time_overall_avg, time_overall_std])
+                            writer.writerow([strategy, popsize, mse_overall_avg, mse_overall_std, rmse_overall_avg, rmse_overall_std, mae_overall_avg, mae_overall_std, mape_overall_avg, mape_overall_std, time_overall_avg, time_overall_std])
         
         pool.close()  # Close the pool
         pool.join()   # Wait for all processes to finish before exiting
