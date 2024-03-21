@@ -56,14 +56,14 @@ hyperparameters_grid = {
                 'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
                 'randtobest1bin', 'randtobest1exp',
                 'currenttobest1bin', 'currenttobest1exp'],
-    'popsize': [63], #[14,28,42,56,70],  # Example popsize hyperparameter
+    'popsize': [70], #[14,28,42,56,70],  # Example popsize hyperparameter
     'mutation': [(0.1, 0.9)],  # Example mutation hyperparameter
     'recombination': [0.9],  # Example recombination hyperparameter
     'init': ['latinhypercube'],  # Example init hyperparameter
 }
 
 
-csv_filename = "de_experiment_results_parrallell_try.csv"
+csv_filename = "de_experiment_results_parrallell_try_1000 copy.csv"
 # Define the headers for the CSV file
 csv_headers = ['Strategy', 'Popsize', 'MSE Overall Avg', 'MSE Overall Std', 'Elapsed Time Avg', 'Elapsed Time Std']
 
