@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=def-awillms
-#SBATCH --time=100:00:00
+#SBATCH --time=48:00:00
 #SBATCH --mem=64G
 #SBATCH --ntasks-per-node=8
 
