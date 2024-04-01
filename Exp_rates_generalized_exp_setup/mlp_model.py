@@ -8,12 +8,10 @@ class MLP(nn.Module):
         super().__init__()
         self.layers = nn.Sequential(
                 nn.Linear(n_features, 64),
+                nn.BatchNorm1d(64),
                 nn.SiLU(),
                 nn.Linear(64, 64),
-                nn.SiLU(),
-                nn.Linear(64, 64),
-                nn.SiLU(),
-                nn.Linear(64, 64),
+                nn.BatchNorm1d(64),
                 nn.SiLU(),
                 nn.Linear(64, n_params)
             )
