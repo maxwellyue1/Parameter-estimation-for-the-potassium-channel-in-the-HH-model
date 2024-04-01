@@ -7,13 +7,13 @@ class MLP(nn.Module):
     def __init__(self, n_features, n_params=7):
         super().__init__()
         self.layers = nn.Sequential(
-                nn.Linear(n_features, 64),
-                nn.BatchNorm1d(64),
+                nn.Linear(n_features, 512),
+                nn.BatchNorm1d(512),
                 nn.SiLU(),
-                nn.Linear(64, 64),
-                nn.BatchNorm1d(64),
+                nn.Linear(512, 512),
+                nn.BatchNorm1d(512),
                 nn.SiLU(),
-                nn.Linear(64, n_params)
+                nn.Linear(512, n_params)
             )
         
     def forward(self, x):

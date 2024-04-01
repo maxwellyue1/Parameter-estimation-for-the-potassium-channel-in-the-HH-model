@@ -14,7 +14,7 @@ class Traces_Dataset(Dataset):
 
         # read using datatable
         df = dt.fread(csv_file)
-        df = torch.tensor(df.to_pandas().values)
+        df = torch.from_numpy(df.to_pandas().values).to(torch.float32)
         
         self.prestep_V = df[:, 0]
         self.step_Vs = df[:, 1:(1+num_traces)]

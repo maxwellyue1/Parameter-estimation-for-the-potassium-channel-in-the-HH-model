@@ -32,7 +32,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  # Uncomme
 print(f"Using device: {device}")
 
 # load and process dataset 
-dataset = Traces_Dataset('dataset2mil.csv')
+# dataset = Traces_Dataset('dataset2mil.csv')
+dataset = Traces_Dataset('dataset_test.csv')
 dataset.split_dataset(0.95, 0.05, 0)
 dataset.clean_features()
 dataset.find_mean_std()
@@ -112,6 +113,8 @@ best_validation_loss = float('inf')
 # record the weights with no training
 # with torch.no_grad():
 #     previous_weights_epoch = weights_1d(model)
+
+print(model)
 
 # Training loop
 for epoch in range(1, n_epochs + 1):
@@ -213,6 +216,8 @@ def experiment_records(row_data, file_path = 'experiment records.csv'):
 print(f"Best validation loss: {best_validation_loss}, at epoch: {best_epoch}")
 #print("RMSE: %.2f" % np.sqrt(best_mse))
 print('Number of total training samples: ', X_train.shape[0])
+
+experiment_records(history_dict)
 
 os.makedirs('train_figures', exist_ok=True)
 plt.figure()  # Create a new figure
