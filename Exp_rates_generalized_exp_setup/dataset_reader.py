@@ -1,14 +1,20 @@
 import torch
+import datatable as dt
 import numpy as np
 from torch.utils.data import Dataset, DataLoader, random_split
 from exp_hh_model import HH_model_exp
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 class Traces_Dataset(Dataset): 
     def __init__(self, csv_file, num_traces = 8, num_pts = 20, num_params = 7):
-        chunk = pd.read_csv(csv_file,chunksize=10000)
-        df = torch.from_numpy(pd.concat(chunk).values).to(torch.float32)
+        # read by chunks
+        # chunk = pd.read_csv(csv_file,chunksize=10000)
+        # df = torch.from_numpy(pd.concat(chunk).values).to(torch.float32)
+
+        # read using datatable
+        df = dt.fread(csv_file)
+        df = torch.tensor(df.to_pandas().values)
         
         self.prestep_V = df[:, 0]
         self.step_Vs = df[:, 1:(1+num_traces)]
