@@ -50,7 +50,7 @@ def get_dataset(trial):
 # def get_dataset():
     # batch_size = trial.suggest_categorical('batch_size', [16, 32, 64, 128, 256, 512, 1024])
     
-    dataset = Traces_Dataset('dataset_test.csv')
+    dataset = Traces_Dataset('dataset2mil.csv')
     dataset.split_dataset(0.95, 0.05, 0)
     dataset.clean_features()
     dataset.find_mean_std()
