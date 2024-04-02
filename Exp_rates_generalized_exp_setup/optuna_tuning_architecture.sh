@@ -2,7 +2,7 @@
 #SBATCH --account=def-awillms
 #SBATCH --ntasks=8
 #SBATCH --gres=gpu:1 
-#SBATCH --mem=64G
+#SBATCH --mem=124G
 #SBATCH --nodes=1   
 #SBATCH --time=26:00:00
 
