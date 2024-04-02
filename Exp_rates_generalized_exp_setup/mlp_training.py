@@ -65,7 +65,7 @@ history_dict['architecture'] = architecture
 
 # loss function and optimizer
 loss_fn = nn.MSELoss()  # mean square error
-optimizer = optim.Adam(model.parameters(), lr=0.001) 
+optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=0.0001)
 
 # record optimizer
 lr = optimizer.param_groups[0]['lr']
