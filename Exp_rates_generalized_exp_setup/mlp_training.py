@@ -32,7 +32,6 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  # Uncomme
 print(f"Using device: {device}")
 
 # load and process dataset 
-# dataset = Traces_Dataset('dataset2mil.csv')
 dataset = Traces_Dataset('dataset2mil.csv')
 dataset.split_dataset(0.95, 0.05, 0)
 dataset.clean_features()
@@ -70,7 +69,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=0.0001)
 # record optimizer
 lr = optimizer.param_groups[0]['lr']
 weight_decay = optimizer.param_groups[0]['weight_decay']
-history_dict['optimizer'] = f'{optimizer.__class__.__name__} {lr}'
+history_dict['optimizer'] = f'{optimizer.__class__.__name__}'
 history_dict['lr'] = lr
 history_dict['weight_decay'] = weight_decay
 
@@ -95,7 +94,7 @@ weights_change_updates = np.array([])  # using numpy array to save memory
 weights_change_epochs = []
 
 # training parameters
-n_epochs = 30   # number of epochs to run
+n_epochs = 50   # number of epochs to run
 batch_size = 1024  # size of each batch
 history_dict['epochs'] = n_epochs
 history_dict['batch size'] = batch_size
