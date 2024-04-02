@@ -69,7 +69,10 @@ optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=0.0001)
 
 # record optimizer
 lr = optimizer.param_groups[0]['lr']
+weight_decay = optimizer.param_groups[0]['weight_decay']
 history_dict['optimizer'] = f'{optimizer.__class__.__name__} {lr}'
+history_dict['lr'] = lr
+history_dict['weight_decay'] = weight_decay
 
 # functions to save and load best nn model, and create an unique id to store the model
 def checkpoint(model, filename, folder='models'):
@@ -92,7 +95,7 @@ weights_change_updates = np.array([])  # using numpy array to save memory
 weights_change_epochs = []
 
 # training parameters
-n_epochs = 300   # number of epochs to run
+n_epochs = 30   # number of epochs to run
 batch_size = 1024  # size of each batch
 history_dict['epochs'] = n_epochs
 history_dict['batch size'] = batch_size
