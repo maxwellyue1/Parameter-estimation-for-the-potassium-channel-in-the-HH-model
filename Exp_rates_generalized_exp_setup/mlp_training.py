@@ -33,7 +33,7 @@ print(f"Using device: {device}")
 
 # load and process dataset 
 # dataset = Traces_Dataset('dataset2mil.csv')
-dataset = Traces_Dataset('dataset_test.csv')
+dataset = Traces_Dataset('dataset2mil.csv')
 dataset.split_dataset(0.95, 0.05, 0)
 dataset.clean_features()
 dataset.find_mean_std()
