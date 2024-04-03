@@ -20,7 +20,7 @@ from dataset_reader import Traces_Dataset
 # initialize a dictionary of training history to store in a csv file
 history_dict = {}
 ###########################################################################
-num_hidden_layers, hidden_size = 1,	512
+num_hidden_layers, hidden_size = 3,	245
 history_dict['num_hidden_layers'] = num_hidden_layers
 history_dict['hidden_size'] = hidden_size
 ###########################################################################
@@ -51,7 +51,7 @@ print(f"Using device: {device}")
 
 
 # load and process dataset 
-dataset = Traces_Dataset('../dataset2mil.csv')
+dataset = Traces_Dataset('../dataset_test.csv')
 dataset.split_dataset(0.95, 0.05, 0)
 dataset.clean_features()
 dataset.find_mean_std()
@@ -81,7 +81,10 @@ class FeedForwardNN(nn.Module):
         self.output_size = output_size
 
         # Define the input layer
-        self.input_layer = nn.Linear(input_size, hidden_size)
+        self.input_layer = nn.Sequential(
+                nn.Linear(input_size, hidden_size),
+                nn.SiLU(),  # SILU activation function
+                nn.BatchNorm1d(hidden_size))
 
         # Define the hidden layers
         self.hidden_layers = nn.ModuleList([
@@ -98,9 +101,9 @@ class FeedForwardNN(nn.Module):
 
     def forward(self, x):
         # Forward pass through the network
-        x = torch.relu(self.input_layer(x))
-        for layer in self.hidden_layers:
-            x = torch.relu(layer(x))
+        x = self.input_layer(x)
+        for hidden_layer in self.hidden_layers:
+            x = hidden_layer(x)
         x = self.output_layer(x)
         return x
     
@@ -118,6 +121,10 @@ class FeedForwardNN(nn.Module):
 model = FeedForwardNN(dataset.inputs.shape[1], hidden_size, num_hidden_layers, dataset.params.shape[1]).to(device)
 model.initialize_weights()
 
+model_architecture = []
+for name, layer in model.named_children():
+    model_architecture.append(layer)
+print(model_architecture)
 
 # loss function and optimizer
 loss_fn = nn.MSELoss()  # mean square error
