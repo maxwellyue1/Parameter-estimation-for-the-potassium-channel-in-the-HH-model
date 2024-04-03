@@ -20,7 +20,7 @@ from dataset_reader import Traces_Dataset
 # initialize a dictionary of training history to store in a csv file
 history_dict = {}
 ###########################################################################
-num_hidden_layers, hidden_size = 3,	245
+num_hidden_layers, hidden_size = 1,	512
 history_dict['num_hidden_layers'] = num_hidden_layers
 history_dict['hidden_size'] = hidden_size
 ###########################################################################
@@ -51,7 +51,7 @@ print(f"Using device: {device}")
 
 
 # load and process dataset 
-dataset = Traces_Dataset('../dataset_test.csv')
+dataset = Traces_Dataset('../dataset2mil.csv')
 dataset.split_dataset(0.95, 0.05, 0)
 dataset.clean_features()
 dataset.find_mean_std()
@@ -93,7 +93,7 @@ class FeedForwardNN(nn.Module):
                 nn.SiLU(),  # SILU activation function
                 nn.BatchNorm1d(hidden_size)
             )
-            for i in range(num_hidden_layers)
+            for i in range(num_hidden_layers-1)
         ])
 
         # Define the output layer
