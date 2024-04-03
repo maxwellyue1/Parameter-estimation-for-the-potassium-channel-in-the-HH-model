@@ -20,7 +20,7 @@ from dataset_reader import Traces_Dataset
 # initialize a dictionary of training history to store in a csv file
 history_dict = {}
 ###########################################################################
-num_hidden_layers, hidden_size = 1,	512	
+num_hidden_layers, hidden_size = 7,	128
 history_dict['num_hidden_layers'] = num_hidden_layers
 history_dict['hidden_size'] = hidden_size
 ###########################################################################
@@ -77,7 +77,7 @@ class FeedForwardNN(nn.Module):
         super(FeedForwardNN, self).__init__()
         self.input_size = input_size
         self.hidden_size = hidden_size
-        self.num_hidden_layers = len(hidden_sizes)
+        self.num_hidden_layers = num_hidden_layers
         self.output_size = output_size
 
         # Define the input layer
