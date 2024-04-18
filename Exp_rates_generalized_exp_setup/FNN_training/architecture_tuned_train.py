@@ -109,7 +109,7 @@ val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
 
 
 # save the training history to a csv file
-def log_data_to_csv(row_data, file_path = 'architecture_tuned_models.csv'): 
+def log_data_to_csv(row_data, file_path = 'architecture_tuned_models_best.csv'): 
     '''
     row_data is a dictionary of the row_data we want to store
     '''
@@ -138,10 +138,14 @@ print(f"Using device: {device}")
 # initialize a dictionary of training history to store in a csv file
 history_dict = {}
 ###########################################################################
-achitecture = (128, 256, 128, 256, 128, 64)
+achitecture = (128, 128, 256, 256, 32)
 history_dict['achitecture'] = achitecture
 print(achitecture)
 ###########################################################################
+
+unique_id = str(uuid.uuid4())[:8]
+history_dict['unique_id'] = unique_id
+print(f'Experiment ID: {unique_id}')
 
 model = FeedForwardNN(achitecture, dataset.inputs.shape[1], dataset.params.shape[1]).to(device)
 model.initialize_weights()
@@ -149,6 +153,14 @@ model.initialize_weights()
 # loss function and optimizer
 loss_fn = nn.MSELoss()  # mean square error
 optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=0.0001)
+
+def checkpoint(model, filename, folder='models'):
+    os.makedirs(folder, exist_ok=True)
+    filepath = os.path.join(folder, filename)
+    torch.save(model.state_dict(), filepath)
+    return filepath
+def resume(model, filepath):
+    model.load_state_dict(torch.load(filepath))
 
 
 # initialization train, val losses
@@ -193,7 +205,7 @@ for epoch in range(1, n_epochs + 1):
 
     if avg_val_loss < best_validation_loss:
         best_epoch = epoch
-        # model_path = checkpoint(model, f"model_{unique_id}.pth")
+        model_path = checkpoint(model, f"model_{unique_id}.pth")
         best_training_loss = avg_train_loss
         best_validation_loss = avg_val_loss
 

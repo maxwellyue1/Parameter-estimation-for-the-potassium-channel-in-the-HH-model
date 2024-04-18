@@ -95,6 +95,7 @@ weights_change_epochs = []
 
 # training parameters
 n_epochs = 50   # number of epochs to run
+n_epochs = 50   # number of epochs to run
 batch_size = 1024  # size of each batch
 history_dict['epochs'] = n_epochs
 history_dict['batch size'] = batch_size

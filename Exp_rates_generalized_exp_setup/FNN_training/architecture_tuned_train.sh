@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:1       # Request GPU "generic resources"
 #SBATCH --mem=84G
 #SBATCH --nodes=1   
-#SBATCH --time=9:00:00
+#SBATCH --time=5:00:00
 
 module python
 source ../../ENV/bin/activate
