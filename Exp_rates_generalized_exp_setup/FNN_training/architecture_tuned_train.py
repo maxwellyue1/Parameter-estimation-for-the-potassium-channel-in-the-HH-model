@@ -28,7 +28,7 @@ torch.backends.cudnn.benchmark = False
 
 
 # load and process dataset 
-dataset = Traces_Dataset('../dataset2mil.csv')
+dataset = Traces_Dataset('../dataset_test.csv')
 dataset.split_dataset(0.9, 0.1, 0)
 dataset.clean_features()
 dataset.find_mean_std()
@@ -139,6 +139,7 @@ print(f"Using device: {device}")
 history_dict = {}
 ###########################################################################
 achitecture = (128, 128, 256, 256, 32)
+achitecture = (64, 256, 128, 128, 256, 64)
 history_dict['achitecture'] = achitecture
 print(achitecture)
 ###########################################################################
