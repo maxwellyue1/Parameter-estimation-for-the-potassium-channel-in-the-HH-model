@@ -1,0 +1,834 @@
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: overflow encountered in exp
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: divide by zero encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: invalid value encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: overflow encountered in exp
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in scalar divide
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: divide by zero encountered in scalar divide
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: invalid value encountered in scalar multiply
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in multiply
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:63: RuntimeWarning: overflow encountered in divide
+  return self.m_infty(V) + (self.m_infty(self.prestep_V) - self.m_infty(V)) * np.exp(- self.t / self.tau_m(V))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in scalar divide
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: divide by zero encountered in scalar divide
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: invalid value encountered in scalar multiply
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in scalar divide
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: divide by zero encountered in scalar divide
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: invalid value encountered in scalar multiply
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in log
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in multiply
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in log
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in multiply
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in scalar divide
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: divide by zero encountered in scalar divide
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: invalid value encountered in scalar multiply
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in multiply
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in log
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in multiply
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:33: RuntimeWarning: divide by zero encountered in divide
+  return (1 / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: divide by zero encountered in divide
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:23: RuntimeWarning: divide by zero encountered in scalar divide
+  self.V_2m = - self.s_m * np.log(self.b_m / self.a_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: divide by zero encountered in scalar divide
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:41: RuntimeWarning: invalid value encountered in scalar multiply
+  tau_0m = (1 / self.a_m) * np.exp((self.delta_m * self.V_2m) / self.s_m)
+/lustre06/project/6000803/maxwell8/Compute-Canada-Research/Exp_rates_generalized_exp_setup/DE/DE_obj_model.py:42: RuntimeWarning: invalid value encountered in multiply
+  return ((tau_0m * np.exp(self.delta_m * ((V - self.V_2m) / self.s_m))) / (1 + np.exp((V - self.V_2m) / self.s_m))).reshape((-1,1))
+MSE:
+[2.72124067e-05 7.17507239e-01 4.91567202e-01 5.35745923e-02
+ 1.65814811e-02 6.14455401e-07 7.43096069e-05]
+[3.06647967e-04 1.32011677e+01 7.07612622e+00 6.99653390e-01
+ 1.64060831e-01 7.87968630e-06 1.00404579e-03]
+MAPE:
+[0.00040072 0.00087196 0.00124743 0.0006642  0.00038716 0.00013815
+ 0.00018613]
+[0.0022883  0.00707645 0.00915028 0.0046117  0.00200935 0.00086272
+ 0.0013744 ]
+
+Note: MAPE not percentange, needs to times 100
