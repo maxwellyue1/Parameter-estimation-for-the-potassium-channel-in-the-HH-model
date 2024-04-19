@@ -12,7 +12,7 @@ from dataset_reader import Traces_Dataset
 from DE_obj_model import de_obj_model   
 from exp_hh_model import HH_model_exp
 
-dataset = Traces_Dataset('../dataset_test.csv')
+dataset = Traces_Dataset('../dataset_00001_test.csv')
 
 params = dataset.params.numpy()
 current_traces = dataset.current_traces.numpy()
@@ -22,6 +22,25 @@ prestep_V_vec = dataset.prestep_V.numpy()
 step_Vs_vec = dataset.step_Vs.numpy()
 
 def obj(x, *args): 
+    '''
+    x: a 1-D array of the variables for the obj function (the parameters we are estimating)
+    args: a tupleo f additional fixed parameters (prestep_V, step_V0, time_traces)
+    *args=(sim_setup_2d, target_current_trances)
+    '''
+    trail_model = de_obj_model(x, args[0])
+    trail_traces = trail_model.simulation()
+    # print(trail_traces[1])
+
+    # target_model = de_obj_model(args[1], args[0])
+    # target_traces = target_model.simulation()
+    # print(target_traces[1]) 
+
+    fit = np.sum(np.square(trail_traces - args[1]))
+    # relative_error = fit/np.sum(np.square(target_traces))
+    
+    return fit
+
+def obj_cheating(x, *args): 
     '''
     x: a 1-D array of the variables for the obj function (the parameters we are estimating)
     *args=(sim_setup_2d, target_current_trances)
@@ -52,18 +71,19 @@ params_searching_bounds = {
 bounds = [params_searching_bounds['p'], params_searching_bounds['g_max'], params_searching_bounds['E_rev'], params_searching_bounds['a_m'], params_searching_bounds['b_m'], params_searching_bounds['delta_m'], params_searching_bounds['s_m']]
 
 hyperparameters_grid = {
-    'strategy': ['best1bin', 'best1exp', 'rand1exp', 'rand1exp', 
-                'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
-                'randtobest1bin', 'randtobest1exp',
-                'currenttobest1bin', 'currenttobest1exp'],
-    'popsize': [140], #[14,28,42,56,70],  # Example popsize hyperparameter
+    # 'strategy': ['best1bin', 'best1exp', 'rand1exp', 'rand1exp', 
+    #             'rand2bin', 'rand2exp', 'best2bin', 'best2exp',
+    #             'randtobest1bin', 'randtobest1exp',
+    #             'currenttobest1bin', 'currenttobest1exp'],
+    'strategy': ['randtobest1bin'],
+    'popsize': [105], #[14,28,42,56,70],  # Example popsize hyperparameter
     'mutation': [(0.1, 0.9)],  # Example mutation hyperparameter
     'recombination': [0.9],  # Example recombination hyperparameter
     'init': ['latinhypercube'],  # Example init hyperparameter
 }
 
 
-csv_filename = "de_experiment_results_parrallell_try_1000_allmetrics.csv"
+csv_filename = "de_tuned_obj_no_cheating_00001.csv"
 # Define the headers for the CSV file
 csv_headers = ['Strategy', 'Popsize', 'MSE Overall Avg', 'MSE Overall Std', 'RMSE Overall Avg', 'RMSE Overall Std', 'MAE Overall Avg', 'MAE Overall Std', 'MAPE Overall Avg', 'MAPE Overall Std', 'Elapsed Time Avg',  'Elapsed Time Std']
 
@@ -78,14 +98,14 @@ def process_sample(sample, strategy, popsize, mutation, recombination, init):
     prestep_V_2d = prestep_V_vec[sample].reshape(-1,1)
     step_Vs_2d = step_Vs_vec[sample].reshape(-1,1)
     t = time_traces[sample]
-    # target_traces = current_traces[sample]
+    target_traces = current_traces[sample]
     target_params = params[sample]
 
     # sim setup for obj evaluation model
     sim_setup_2d = {'prestep_V': prestep_V_2d, 'step_Vs': step_Vs_2d, 't': t}   
 
     start_time = time.time()
-    result = differential_evolution(obj, bounds, args=(sim_setup_2d, target_params), strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init, seed=42, maxiter=300, tol=-1)
+    result = differential_evolution(obj, bounds, args=(sim_setup_2d, target_traces), strategy=strategy, popsize=popsize, mutation=mutation, recombination=recombination, init=init, seed=42, maxiter=300, tol=-1)
     end_time = time.time()
     
     mse = (target_params - result.x) ** 2
@@ -133,6 +153,9 @@ if __name__ == '__main__':
 
                             mse_overall_avg = np.mean(mse_mat)
                             mse_overall_std = np.std(np.mean(mse_mat, axis=1))
+                            print('MSE:')
+                            print(np.mean(mse_mat, axis=0))
+                            print(np.std(mse_mat, axis=0))
 
                             rmse_overall_avg = np.mean(rmse_mat)
                             rmse_overall_std = np.std(np.mean(rmse_mat, axis=1))
@@ -141,6 +164,9 @@ if __name__ == '__main__':
                             mae_overall_std = np.std(np.mean(mae_mat, axis=1))
 
                             mape_overall_avg = np.mean(mape_mat)
+                            print('MAPE:')
+                            print(np.mean(mape_mat, axis=0))
+                            print(np.std(mape_mat, axis=0))
                             mape_overall_std = np.std(np.mean(mape_mat, axis=1))
 
                             time_overall_avg = np.mean(time_mat)
